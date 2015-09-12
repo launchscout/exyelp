@@ -5,6 +5,8 @@ defmodule Exyelp.Mixfile do
     [app: :exyelp,
      version: "0.0.1",
      elixir: "~> 1.0",
+     description: "An Elixir Yelp API client",
+     package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -17,10 +19,6 @@ defmodule Exyelp.Mixfile do
     [applications: [:logger, :httpoison]]
   end
 
-  defp description do
-    "An Elixir Yelp API client"
-  end
-  
   # Dependencies can be Hex packages:
   #
   #   {:mydep, "~> 0.3.0"}
