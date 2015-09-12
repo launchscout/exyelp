@@ -17,6 +17,10 @@ defmodule Exyelp.Mixfile do
     [applications: [:logger, :httpoison]]
   end
 
+  defp description do
+    "An Elixir Yelp API client"
+  end
+  
   # Dependencies can be Hex packages:
   #
   #   {:mydep, "~> 0.3.0"}
@@ -29,10 +33,16 @@ defmodule Exyelp.Mixfile do
   defp deps do
     [
       {:exvcr, "~> 0.3", only: [:dev, :test]},
-      {:oauther, path: "../oauther"},
-      # {:oauther, github: "gaslight/oauther"},
+      {:oauther, github: "gaslight/oauther"},
       {:httpoison, ">= 0.0.1"},
       {:poison, ">= 0.0.1"}
     ]
   end
+
+  defp package do
+    [ contributors: ["superchris"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/gaslight/exyelp"} ]
+  end
+
 end
