@@ -17,4 +17,15 @@ defp deps do
 end
 ```
 
-Call `Exyelp.search` with params and credentials. See `exyelp_test` for example code.
+Call `Exyelp.search` with params and credentials.
+
+```elixir
+creds = %{
+  consumer_key: "key",
+  consumer_secret: "secret",
+  token: "token",
+  token_secret: "secret"
+}
+params = %{location: "Cincinnati, OH", term: "Chili"}
+results = Exyelp.search(params, creds)
+```
