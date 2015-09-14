@@ -3,7 +3,7 @@ defmodule Exyelp.Mixfile do
 
   def project do
     [app: :exyelp,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.0",
      description: "An Elixir Yelp API client",
      package: package,
@@ -31,7 +31,7 @@ defmodule Exyelp.Mixfile do
   defp deps do
     [
       {:exvcr, "~> 0.3", only: [:dev, :test]},
-      {:oauther, github: "gaslight/oauther"},
+      {:oauther, ">= 1.0.2"},
       {:httpoison, ">= 0.0.1"},
       {:poison, ">= 0.0.1"}
     ]
